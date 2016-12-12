@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Ejemplo1" default="t1" basedir="."> 
+<taskdef name="deploy" classname="org.apache.catalina.ant.DeployTask"/>
+<taskdef name="start" classname="org.apache.catalina.ant.StartTask"/>
+<taskdef name="stop" classname="org.apache.catalina.ant.StopTask"/>
+<taskdef name="undeploy" classname="org.apache.catalina.ant.UndeployTask"/>
+<property name="libs.CopyLibs.classpath" value="./tools/ant/lib/org-netbeans-modules-java-j2seproject-copylibstask.jar" />
+<property name="j2ee.server.home" value="./tools/ant" />
+<taskdef name="closeconnections" classname="es.elfframework.ant.CloseTomcatDataSource"/>
+    <target name="t1" depends="dist">
+		<deploy url="http://172.16.205.136/manager/text" username="admin" password="admin" path="/Facturacion" war="./dist/AD.war" update="true"/>
+    </target>
+</project>   
+
