@@ -28,12 +28,12 @@
             Connection connection=dataSource.getConnection(); //Obtener la conexión del pool
             
             Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT nombre FROM cohete");
+            ResultSet rs = stmt.executeQuery("SELECT nombre FROM cohetes");
             rs.next();
             nombre = rs.getString(1);
             connection.close();
         %>
-
+            
            <h1><%=nombre%></h1> 
         
     </body>

@@ -24,7 +24,7 @@
                 Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/spacex", "root", "root")) {
                 //System.out.println("Database connected!");
                 Statement set = connection.createStatement();
-                rs = set.executeQuery("SELECT nombre FROM cohete");
+                rs = set.executeQuery("SELECT nombre FROM cohetes");
                 rs.next();
                 out.println("Query ejecutada");
             } catch (SQLException e) {
