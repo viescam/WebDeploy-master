@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Ejemplo1" default="t1" basedir="."> 
+<project name="AD" default="default" basedir=".">
+<import file="nbproject/build-impl.xml"/> 
 <taskdef name="deploy" classname="org.apache.catalina.ant.DeployTask"/>
 <taskdef name="start" classname="org.apache.catalina.ant.StartTask"/>
 <taskdef name="stop" classname="org.apache.catalina.ant.StopTask"/>
@@ -8,7 +9,7 @@
 <property name="j2ee.server.home" value="./tools/ant" />
 <taskdef name="closeconnections" classname="es.elfframework.ant.CloseTomcatDataSource"/>
     <target name="t1" depends="dist">
-		<deploy url="http://172.16.205.136/manager/text" username="admin" password="admin" path="/Facturacion" war="./dist/AD.war" update="true"/>
+            <deploy url="http://172.16.205.189/manager/text" username="admin" password="admin" path="/Facturacion" war="./dist/AD.war" update="true"/>
     </target>
 </project>   
 
